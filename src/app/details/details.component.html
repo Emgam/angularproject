@@ -1,0 +1,22 @@
+<div class="item">
+  <img src="{{data.image}}" alt="">
+  <div class="body">
+      <h4>{{data.title}}</h4>
+      <div class="description" [hidden]="!showDescription">
+          <p>{{data.description}}</p>
+        </div>
+        <button class="btn btn-link toggle-description" (click)="showDescription = !showDescription">
+          {{showDescription ? '-' : '+'}} Description
+        </button>
+      </div>
+  <div class="px-3 mb-2 d-flex justify-content-between aligns-datas-center">
+  <button class="btn btn-grad" *ngIf="!addbutton" (click)="addbutton=true">add to cart</button>
+  <div class="d-flex w-50" *ngIf="addbutton">
+      <input type="number" class="form-control" [(ngModel)]="amount">
+      <button class="btn btn-success"  (click)="add()">add</button>
+  </div>
+  <span> {{data.price}}DT</span>
+  </div>
+</div>
+
+

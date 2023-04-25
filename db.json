@@ -1,0 +1,223 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Skinny Jeans",
+      "description": "A pair of stylish and comfortable skinny jeans in dark blue.",
+      "price": 49,
+      "image": "https://img.ltwebstatic.com/images3_pi/2023/04/13/1681356780f4a7a02c03521ef90b240478967358d6_thumbnail_405x552.webp",
+      "category": "Trousers",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Dark Blue", "Black"]
+    },
+    {
+      "id": 2,
+      "name": "High Waisted Jeans",
+      "description": "A pair of trendy high waisted jeans in light blue.",
+      "price": 59,
+      "image": "https://img.ltwebstatic.com/images3_pi/2021/10/30/16355795579e8715dfc6fb30b5bfa9e3fcfdc58250_thumbnail_405x552.webp",
+      "category": "Trousers",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["Light Blue", "Black"]
+    },
+    {
+      "id": 3,
+      "name": "Cargo Pants",
+      "description": "A pair of comfortable and practical cargo pants in olive green.",
+      "price": 69,
+      "image": "https://img.ltwebstatic.com/images3_pi/2021/11/09/163647132363274039b3864aa7bf16262c07f34c25_thumbnail_405x552.webp",
+      "category": "Trousers",
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["Olive Green", "Black"]
+    },
+    {
+      "id": 4,
+      "name": "Floral Dress",
+      "description": "A beautiful and elegant floral dress in pink and white.",
+      "price": 79,
+      "image": "https://img.ltwebstatic.com/images3_pi/2021/12/07/1638868034c7477fd085e9d5ad2bbcfa4a2c72d125_thumbnail_405x552.webp",
+      "category": "Dress",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Pink and White"]
+    },
+    {
+      "id": 5,
+      "name": "Short Black Dress",
+      "description": "A classic and chic short black dress.",
+      "price": 89,
+      "image": "https://img.ltwebstatic.com/images3_pi/2023/04/07/16808653700be32a5c7a1732976f0b199dd7f2d346.webp",
+      "category": "Dress",
+      "sizes": ["XS", "S", "M", "L"],
+      "colors": ["Black"]
+    },
+    {
+      "id": 6,
+      "name": "Graphic T-Shirt",
+      "description": "A trendy and comfortable graphic t-shirt with a cool design.",
+      "price": 29,
+      "image": "https://img.ltwebstatic.com/images3_pi/2022/10/17/166597084722625232e347d77c96311ad1a366c7a6_thumbnail_405x552.webp",
+      "category": "T-Shirt",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["White"]
+    },
+  {
+    "id": 19,
+    "name": "Striped Sweater",
+    "description": "A cozy striped sweater that will keep you warm and stylish during the cooler months.",
+    "price": 99,
+    "image": "https://img.ltwebstatic.com/images3_pi/2022/08/30/1661835776159d0e5e9ce5e73ca78e55cd576e0f5b_thumbnail_405x552.webp",
+    "category": "Sweater",
+    "sizes": ["S", "M", "L"],
+    "colors": ["Black", "Blue", "White"]
+}
+,
+{
+    "id": 20,
+    "name": "Leather Jacket",
+    "description": "A stylish leather jacket that will elevate any outfit.",
+    "price": 149,
+    "image": "https://img.ltwebstatic.com/images3_pi/2022/09/21/16637229171065293abb3bf096fc0b5b7fbbff650b_thumbnail_405x552.webp",
+    "category": "Coats",
+    "sizes": ["S", "M", "L"],
+    "colors": ["Black", "Brown"]
+},
+     { "id": 32,
+      "name": "Wrap Dress",
+      "description": "Elegant wrap dress with a V-neckline and flutter sleeves.",
+      "price": 129.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2021/05/24/16218436019caaca63f842b6cff658544bf5eee780_thumbnail_405x552.webp",
+      "category": "Dress",
+      "sizes": ["S", "M", "L"],
+      "colors": ["blue", "pink"]
+    },
+{
+      "id": 65,
+      "name": "Basic T-Shirt",
+      "description": "Comfortable cotton T-shirt with a crew neckline.",
+      "price": 19.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2021/08/23/1629687579a1733d17d98513ced141bcd90f649c75_thumbnail_405x552.webp",
+      "category": "t-shirt",
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["brown", "beige"]
+    },
+{
+      "id": 99,
+      "name": "Silk Camisole",
+      "description": "Luxurious silk camisole with adjustable spaghetti straps.",
+      "price": 69.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2022/05/27/16536212556ed6490c756f2319579813b0e6c80a44.webp",
+      "category": "tops",
+      "sizes": ["S", "M", "L"],
+      "colors": ["ivory", "black"]
+    },
+{
+      "id": 77,
+      "name": "Long Trench Coat",
+      "description": "Classic long trench coat made of water-resistant fabric.",
+      "price": 249.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2022/12/26/16720379493009419209995312408d02f81f967c85_thumbnail_405x552.webp",
+      "category": "coats",
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["beige", "black"]
+    },
+ {
+      "id": 44,
+      "name": " Skirt Suit",
+      "description": "A classic  skirt suit for formal occasions",
+      "price": 89.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2023/01/16/1673842096f03ade3c9e54b46105c1d645416517b0_thumbnail_405x552.webp",
+      "category": "skirt sets",
+      "sizes": ["S", "M", "L"],
+      "colors": ["pink"]
+    },
+     { "id": 98,
+      "name": "Printed Skirt Set",
+      "description": "A colorful printed skirt set perfect for summer",
+      "price": 69.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2022/05/31/1653987018390ca813cd2cd41aa9a17021583b1d97_thumbnail_405x552.webp",
+      "category": "skirt sets",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Multi-colored"]
+    },
+{
+      "id": 97,
+      "name": "Denim Short Set",
+      "description": "A casual denim short set for everyday wear",
+      "price": 49.99,
+      "image":" https://img.ltwebstatic.com/images3_pi/2021/05/25/1621940792f55f3e42a7430cdd143807ba6f89c74c_thumbnail_405x552.webp",
+      "category": "short sets",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Blue"]
+    },
+{
+      "id": 59,
+      "name": "Striped Blazer Set",
+      "description": "A professional striped blazer set for the office",
+      "price": 99.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2022/09/22/16638115026a40edbf9cc8405a057021bb29cb2136_thumbnail_900x.webp",
+      "category": "blazer sets",
+      "sizes": ["S", "M", "L"],
+      "colors": ["Black/White"]
+    },
+{
+
+      "id": 90,
+      "name": "Boho Maxi Dress",
+      "description": "This flowy maxi dress features a bohemian print and a flattering empire waist.",
+      "price": 89.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2021/11/09/16364257410b37263269d05c51ddc1dcb91d88a2a2_thumbnail_405x552.webp",
+      "category": "Dresses",
+      "sizes": ["XS", "S", "M", "L", "XL"],
+      "colors": ["Blue", "Green", "Purple"]
+    },
+    {
+      "id": 92,
+      "name": "Embroidered Blouse",
+      "description": "This sheer blouse features delicate embroidery and billowy sleeves.",
+      "price": 59.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2023/03/02/16777430939df9762d3a11edafe02888103d9db1ce.webp",
+      "category": "Tops",
+      "sizes": ["S", "M", "L"],
+      "colors": ["black", "Beige"]
+    },
+    {
+      "id": 91,
+      "name": "Crochet Kimono",
+      "description": "This open-front kimono features intricate crochet details and a fringe hem.",
+      "price": 79.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2021/12/04/1638601964539f067b153e730487be7eb0f9ea4965_thumbnail_405x552.webp",
+      "category": "Outerwear",
+      "sizes": ["M", "L", "XL"],
+      "colors": ["Cream"]
+    }
+  ,
+ {
+      "id": 61,
+      "name": "Mesh Panel Leggings",
+      "description": "These leggings feature breathable mesh panels and a high-waisted design.",
+      "price": 69.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2022/11/24/166929015112c5d90c3b83e1b722f55fd1158a32ad_thumbnail_405x552.webp",
+      "category": "Activewear",
+      "sizes": ["XS", "S", "M", "L"],
+      "colors": ["Black", "Gray"]
+    },
+    {
+      "id": 83,
+      "name": "Racerback Tank Top",
+      "description": "This lightweight tank top features a racerback design and moisture-wicking fabric.",
+      "price": 39.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2023/04/07/1680866134178b674ceac42d4d6b6fdac4667fa72c.webp",
+      "category": "Activewear",
+      "sizes": ["S", "M", "L", "XL"],
+      "colors": ["black", "brown","white"]
+    },
+    {
+      "id": 51,
+      "name": "Running Shorts",
+      "description": "These shorts feature built-in briefs and a hidden zip pocket for keys or cards.",
+      "price": 49.99,
+      "image": "https://img.ltwebstatic.com/images3_pi/2022/02/10/1644479971c9188e403f1086239f725877e4145fa4_thumbnail_405x552.webp",
+      "category": "Activewear",
+      "sizes": ["XS", "S", "M", "L"],
+      "colors": ["Black"]
+    }]}

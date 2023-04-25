@@ -1,0 +1,144 @@
+.account-management-container {
+
+  height: 600px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.account-management-heading {
+
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #ff69b4;
+}
+
+.account-management-tabs {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.account-management-tab {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1  51%, #ee9ca7  100%);
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.account-management-tab:hover,
+.account-management-tab.active {
+  background-color: #ff5e9e;
+}
+
+.account-management-content {
+  position: relative;
+}
+
+  .btn-grad {
+    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1  51%, #ee9ca7  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+  }
+
+  .btn-grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .btn-grad {
+    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    position: relative; /* needed for the pseudo-element */
+  }
+
+  .btn-grad::before {
+    content: " entregestrer";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1 51%, #ee9ca7 100%);
+    z-index: -1;
+    border-radius: 10px;
+  }
+
+  .btn-grad:hover::before {
+    background-position: right center;
+  }
+
+  .btn-grad:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .btn-grad::after {
+    content: "Enregistrer";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  }
+  .btn-grad {
+    background-image: linear-gradient(to right, #ee9ca7 0%, #ffdde1  51%, #ee9ca7  100%);
+    margin: 0 auto; /* pour centrer le bouton horizontalement */
+    display: block;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+  }
+
+  .btn-grad:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  /* ajouter la classe .btn-rose pour changer la couleur de fond en rose */
+  button.btn-rose {
+    padding: 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+    display: block;
+    margin: 0 auto;
+    background-color: pink;
+    color: white;
+  }

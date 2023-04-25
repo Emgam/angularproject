@@ -1,0 +1,107 @@
+
+<div fxLayout="column" fxLayoutAlign="center center" class="login-main">
+  <mat-card class="my-card" >
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" fxLayout="column">
+      <div class="authBlock">
+        <mat-card-header>
+          <mat-card-title><h3><b>Personal Information</b></h3></mat-card-title>
+        </mat-card-header>
+        <div fxLayout="column" fxLayoutAlign="center center">
+          <div class="input-container">
+            <div class="form-group">
+              <i class="fas fa-envelope input-prefix"></i>
+              <input type="email" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" #userName required id="userEmail" class="form-control-small" />
+              <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+                <div *ngIf="f['email'].errors['required']">Email is required</div>
+                <div *ngIf="f['email'].errors['email']">Invalid email format</div>
+              </div>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="form-group">
+              <i class="fas fa-key input-prefix"></i>
+              <input type="password" id="password" name="password" class="form-control-small" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" #userPassword required />
+              <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+                <div *ngIf="f['password'].errors['required']">Password is required</div>
+                <div *ngIf="f['password'].errors['minlength']">
+                  Password must be at least 6 characters
+                </div>
+                <div *ngIf="f['password'].errors['maxlength']">
+                  Password must not exceed 40 characters
+                </div>
+              </div>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+          <div class="input-container">
+            <div class="form-group">
+              <i class="fas fa-key input-prefix"></i>
+              <input type="password" id="confirmPassword" name="confirmPassword" class="form-control-small" placeholder="Confirm Password" [ngClass]="{ 'is-invalid': submitted && f['confirmPassword'].errors }" #userPassword required />
+              <div *ngIf="submitted && f['confirmPassword'].errors" class="invalid-feedback">
+                <div *ngIf="f['confirmPassword'].errors['required']">
+                  Confirmation password is required
+                </div>
+                <div *ngIf="f['confirmPassword'].errors['matching']">
+                  Confirmation password does not match
+                </div>
+              </div>
+              <span class="highlight"></span>
+              <span class="bar"></span>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+      <div class="row mt-3">
+        <div class="d-flex justify-content-center">
+          <span>
+            <button type="submit" id="animatebutton"
+              class="btn btn-lg lady-lips-gradient text-white"
+              value="Log in"
+              (click)="authService.SignUp(userName.value, userPassword.value)">
+              Sign Up
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="form-check checkbox mb-3 mt-3 d-flex align-items-center">
+        <input type="checkbox" formControlName="acceptTerms" class="form-check-in" [ngClass]="{ 'is-invalid': submitted && f['acceptTerms'].errors }" />
+        <label for="acceptTerms" class="form-check-label ">I have read and agree to the Terms and Conditions</label>
+        <div *ngIf="submitted && f['acceptTerms'].errors" class="invalid-feedback">
+          Accepting the terms and conditions is mandatory
+        </div>
+      </div>
+      <div class="or-container"><div class="line-separator"></div> <div class="or-label">or</div><div class="line-separator"></div></div>
+
+      <!-- Continue with Google -->
+      <div class="d-flex justify-content-center">
+        <div class="row">
+          <div class="col-auto">
+            <a class="btn btn-lg btn-google btn-block text-lowercase btn-rounded mt-2" (click)="authService.GoogleAuth()">
+              <img id="f" src="https://img.icons8.com/color/16/000000/google-logo.png"> log in with google
+            </a>
+
+          </div>
+      </div>
+</div>
+</div>
+
+    <div class="redirectToLogin">      <span
+        id="ac">Already have an account?
+        <span class="redirect" routerLink="/sign-in"><b>Log In</b></span></span>
+    </div>
+</div>
+</form>
+</mat-card>
+
+
+</div>
+

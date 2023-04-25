@@ -1,0 +1,63 @@
+<div class="CartBox">
+  <h1 class="text-dan">My cart items</h1>
+  <div class="headcart">
+
+  </div>
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th></th>
+        <th style="color: rgb(0, 0, 0); padding-right: 1rem;">Name</th>
+        <th style="color: rgb(0, 0, 0); padding-right: 1rem;">Price</th>
+        <th style="color: rgb(0, 0, 0); width: 25%; padding-right: 1rem;">Quantity</th>
+        <th style="color: black; padding-right: 3rem;">Total</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of cartproducts">
+        <td><img src="{{item.item.image}}" alt=""></td>
+        <td style="color: rgb(0, 0, 0); padding-right: 1rem;">{{item.item.title}}</td>
+        <td style="color: rgb(0, 0, 0); padding-right: 1rem;">{{item.item.price}}</td>
+        <td style="padding-right: 1rem;">
+          <div class="quantity">
+            <button class="btn btn-dark">+</button>
+            <input class="form-control" type="number" [(ngModel)]="item.quantity" min="1">
+            <button class="btn btn-dark">-</button>
+          </div>
+        </td>
+        <td style="color: black; padding-right: 3rem;">{{item.item.price * item.quantity}}</td>
+        <td>
+          <button class="btn btn-danger">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="color: black; padding-right: 3rem;">{{total}} DT</td>
+        <div style="display: flex;">
+          <div class="col">
+            <div class="col">
+              <button class="bt">
+                <i class="fas fa-lock"></i> checkout
+              </button>
+            </div>
+
+
+          <div class="col">
+            <button class="bt">
+              Clear Shopping Cart
+            </button>
+          </div>
+          </div>
+        </div>
+
+        <td></td>
+      </tr>
+    </tfoot>
+  </table>
+</div>

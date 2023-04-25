@@ -1,0 +1,63 @@
+
+
+<!-- Your login form goes here -->
+
+<div fxLayout="column" fxLayoutAlign="center center" class="login-main">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title><b>Log in to finish your purchase and secure it!</b></mat-card-title>
+    </mat-card-header>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="row">
+        <div class="input-container">
+          <i class="fas fa-envelope input-prefix"></i>
+          <input type="email" placeholder="Email" [ngClass]="{ 'is-invalid': submitted && f['email'].errors }" #userName required id="userEmail" class="form-control-small black-underline" />
+          <div *ngIf="submitted && f['email'].errors" class="invalid-feedback">
+            <div *ngIf="f['email'].errors['required']">Email is required</div>
+            <div *ngIf="f['email'].errors['email']">Invalid email</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-container">
+         <i class="fas fa-key input-prefix"></i>
+          <input type="password" id="password" name="password" class="form-control-small black-underline" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f['password'].errors }" #userPassword required>
+          <div *ngIf="submitted && f['password'].errors" class="invalid-feedback">
+            <div *ngIf="f['password'].errors['required']">Password is required</div>
+            <div *ngIf="f['password'].errors['minlength']">Password must be at least 6 characters long</div>
+            <div *ngIf="f['password'].errors['maxlength']">Password should not exceed 40 characters</div>
+          </div>
+        </div>
+      </div>
+      <div class="d-flex justify-content-center" >
+        <span> <button type="submit" id="animatebutton"
+          class="btn btn-lg lady-lips-gradient text-white"
+            value="Log in"
+            (click)="authService.SignIn(userName.value, userPassword.value)" >log in </button></span></div>
+
+
+      <div class="or-container">
+        <div class="line-separator"></div>
+        <div class="or-label">or</div>
+        <div class="line-separator"></div>
+      </div>
+      <div class="d-flex justify-content-center">
+        <div class="row">
+          <div class="col-auto">
+            <a class="btn btn-lg btn-google btn-block text-lowercase btn-rounded mt-2"  (click)="authService.GoogleAuth()">
+              <img id="f" src="https://img.icons8.com/color/16/000000/google-logo.png"> log in with google
+            </a>
+
+          </div>
+      </div>
+      </div>
+      <div class="forgotPassword">
+        <span routerLink="/forgot-password" id="ac"><b>Forgot Password?</b></span>
+      </div>
+      <div class="redirectToLogin">
+        <span id="ac">Don't have an account?<span class="redirect" routerLink="/register-user" id="ac"><span><b>Sign Up</b></span></span></span>
+      </div>
+    </form>
+  </mat-card>
+</div>
+

@@ -1,0 +1,78 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+.nav-list {
+    display: flex; /* Use flexbox to align the list items */
+    align-items: center; /* Center the items vertically */
+    list-style: none; /* Remove the default list style */
+    margin: 0; /* Remove the default margin */
+    padding: 0; /* Remove the default padding */
+    justify-content: space-between; /* Space the items out evenly */
+    font-family: Century,arial,sans-serif;
+  }
+  .search-input {width:100%;}
+  .pinknova {
+    font-size: 50px; /* adjust the font size to your preference */
+    font-family: Century,arial,sans-serif;
+  }
+  .search-input {
+    width: 50px; /* ou toute autre valeur que vous souhaitez */
+  }
+
+
+  .nav-list li {
+    margin: 0 1rem; /* Add some space between each list item */
+    font-family: Century,arial,sans-serif;
+  }
+
+  .nav-list a {
+    display: flex; /* Use flexbox to align the icon and text */
+    align-items: center; /* Center the items vertically */
+    text-decoration: none; /* Remove the default underline */
+    color: #333; /* Set the link color */
+    font-family: Century,arial,sans-serif;
+  }
+
+  .nav-list a i {
+    margin-right: 0.5rem; /* Add some space between the icon and text */
+
+  }
+  .navbar-nav.ml-auto{padding-left: 130px;}
+  .nav-right {
+    margin-left: auto; /* Push the items to the right */
+    font-family: Century,arial,sans-serif;
+  }
+  .navbar-nav {
+
+    font-family: Century,arial,sans-serif;
+  }
+  .d-flex{margin-left: 200px;}
+  .navbar-nav > li {
+    margin-right: 1rem;
+
+  }
+
+  .navbar-nav:last-child {
+    margin-left: auto;
+  }
+  .navbar-nav form {
+    display: flex; /* Use flexbox to align the form elements */
+    align-items: center; /* Center the elements vertically */
+  }
+
+  .search-input {
+    flex: 1;
+    width: auto; /* Use all available space */
+  }
+  .navbar-nav.ms-auto {
+    margin-right: 330px;
+  }
+
+
+  .search-input:focus {
+    width: auto; /* Expand the input when focused */
+  }
+.fa fa-search{padding-left: 20px;}
+  .search-btn {
+    margin-left: 1rem; /* Add some space between the input and icon */
+  }
+
