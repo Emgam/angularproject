@@ -51,7 +51,7 @@ SignIn(email: string, password: string) {
                 if (userRoles.admin) {
                   this.router.navigate(['admin']);
                 } else {
-                  this.router.navigate(['dashboard']);
+                  this.router.navigate(['home']);
                 }
               }
             });
@@ -149,7 +149,7 @@ SignIn(email: string, password: string) {
   // Sign in with Google
   GoogleAuth() {
     return this.AuthLogin(new auth.GoogleAuthProvider()).then((res: any) => {
-      this.router.navigate(['dashboard']);
+      this.router.navigate(['home']);
     });
   }
   // Auth logic to run auth providers
@@ -157,7 +157,7 @@ SignIn(email: string, password: string) {
     return this.afAuth
       .signInWithPopup(provider)
       .then((result) => {
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['home']);
         this.SetUserData(result.user);
       })
       .catch((error) => {

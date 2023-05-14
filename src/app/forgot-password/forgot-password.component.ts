@@ -20,7 +20,7 @@ import {
 } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
 import { FooterComponent } from '../footer/footer.component';
-import { NavbarComponent } from '../header/navbar.component';
+import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-forgot-password',
   templateUrl: './forgot-password.component.html',

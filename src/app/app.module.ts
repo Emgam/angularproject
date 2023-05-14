@@ -18,14 +18,14 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { VerifyEmailComponent } from './verify-email/verify-email.component';
+import { HttpClientModule } from '@angular/common/http';
+
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { getAuth, provideAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { provideStorage, getStorage } from '@angular/fire/storage';
-import { NavbarComponent } from './header/navbar.component';
+
 import { FooterComponent } from './footer/footer.component';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -39,7 +39,6 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatTableModule } from '@angular/material/table';
-
 import { MatListModule } from '@angular/material/list';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MatPaginatorModule } from '@angular/material/paginator';
@@ -58,21 +57,43 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatTreeModule } from '@angular/material/tree';
-import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import { CommonModule } from '@angular/common';
 import { AccountmanaComponent } from './accountmana/accountmana.component';
 import { CartComponent } from './cart/cart.component';
 import { ContactComponent } from './contact/contact.component';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
-import { ProductComponent } from './product/product.component';
-import { MenuComponent } from './menu/menu.component';
+
+import { ChartModule } from 'angular-highcharts';
+
+
 import { SelectsComponent } from './selects/selects.component';
 
+import { AboutComponent } from './about/about.component';
+import{NewsComponent} from './news/news.component';
+import { GerepComponent } from './gerep/gerep.component';
+import { MenuComponent } from './menu/menu.component';
+import { HeaderComponent } from './header/header.component';
 
-
-
-
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { NgChartsModule } from 'ng2-charts';
+import { LayoutModule } from '@angular/cdk/layout';
+import { HeaderrComponent } from './headerr/headerr.component';
+import { MainComponent } from './main/main.component';
+import { SalesbycategoryComponent } from './salesbycategory/salesbycategory.component';
+import { SalesByMonthComponent } from './sales-by-month/sales-by-month.component';
+import { TopThreeProductsComponent } from './top-three-products/top-three-products.component';
+import { TopWidgetsComponent } from './top-widgets/top-widgets.component';
+import { FontAwesomeModule, FaIconLibrary } from '@fortawesome/angular-fontawesome';
+import { faBoxes, faMoneyBill } from '@fortawesome/free-solid-svg-icons';
+import { LastFewTransactionsComponent } from './last-few-transactions/last-few-transactions.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { TitleCasePipe } from '@angular/common';
+import { AdminsignupComponent } from './adminsignup/adminsignup.component';
+import { AdminAddProductComponent } from './admin-add-product/admin-add-product.component';
+import { AdminUpdateComponent } from './admin-update/admin-update.component';
+import { AdminHomeComponent } from './admin-home/admin-home.component';
 
 
 const firebaseUiAuthConfig: firebaseui.auth.Config = {
@@ -88,21 +109,31 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     AppComponent,
     SignInComponent,
     SignUpComponent,
-
-    VerifyEmailComponent,
     ForgotPasswordComponent,
-    NavbarComponent,
     FooterComponent,
-    AdminDashboardComponent,
-    DashboardComponent,
     AccountmanaComponent,
     CartComponent,
     ContactComponent,
     DetailsComponent,
     HomeComponent,
-    ProductComponent,
+   NewsComponent,
+    SelectsComponent,
+    AboutComponent,
+    HeaderComponent,
+    GerepComponent,
     MenuComponent,
-    SelectsComponent
+    HeaderrComponent,
+    MainComponent,
+    SalesbycategoryComponent,
+    TopThreeProductsComponent,
+    TopWidgetsComponent,
+    LastFewTransactionsComponent,
+    DashboardComponent,
+    AdminsignupComponent,
+    AdminAddProductComponent,
+    AdminUpdateComponent,
+    AdminHomeComponent,
+    SalesByMonthComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -116,7 +147,9 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     MatButtonModule,
     MatButtonToggleModule,
     MatCheckboxModule,
+    HttpClientModule,
     MatChipsModule,
+    FontAwesomeModule,
     MatListModule,
     MatNativeDateModule,
     MatPaginatorModule,
@@ -124,6 +157,7 @@ const firebaseUiAuthConfig: firebaseui.auth.Config = {
     MatProgressSpinnerModule,
     MatRadioModule,
     MatRippleModule,
+    ChartModule,
  MatSelectModule ,
  MatSidenavModule ,
  MatSliderModule ,
@@ -134,11 +168,12 @@ MatSortModule ,
 MatTabsModule ,
 MatTableModule,
 CommonModule,
+MatListModule,
   MatToolbarModule ,
  MatTooltipModule ,
  MatTreeModule ,
-
-
+ MatListModule,
+ NgChartsModule,
     MatDatepickerModule,
     MatDialogModule,
     MatExpansionModule,
@@ -162,9 +197,9 @@ CommonModule,
       positionClass: 'toast-bottom-right',
       preventDuplicates: true,
     }),
-    HotToastModule.forRoot(),
+    LayoutModule,
   ],
-  providers: [AuthService],
+  providers: [AuthService,TitleCasePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

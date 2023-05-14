@@ -1,22 +1,45 @@
-<div class="item">
-  <img src="{{data.image}}" alt="">
-  <div class="body">
-      <h4>{{data.title}}</h4>
-      <div class="description" [hidden]="!showDescription">
-          <p>{{data.description}}</p>
-        </div>
-        <button class="btn btn-link toggle-description" (click)="showDescription = !showDescription">
-          {{showDescription ? '-' : '+'}} Description
-        </button>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
+
+<div class="card product-card">
+  <div class="card-body">
+    <div class="product-details-container">
+      <div class="product-image-container">
+        <img [src]="product?.image" alt="{{ product?.name }}" class="product-image">
       </div>
-  <div class="px-3 mb-2 d-flex justify-content-between aligns-datas-center">
-  <button class="btn btn-grad" *ngIf="!addbutton" (click)="addbutton=true">add to cart</button>
-  <div class="d-flex w-50" *ngIf="addbutton">
-      <input type="number" class="form-control" [(ngModel)]="amount">
-      <button class="btn btn-success"  (click)="add()">add</button>
-  </div>
-  <span> {{data.price}}DT</span>
+      <div class="product-description-container">
+        <h2>{{ product?.name }}</h2>
+        <p>{{ product?.description }}</p>
+        <p>Price: {{ product?.price }}</p>
+        <p>Category: {{ product?.category }}</p>
+        <div class="product-sizes">
+          <span *ngFor="let size of product?.sizes" class="product-size">{{ size }}</span>
+        </div>
+        <div class="product-colors">
+          <span *ngFor="let color of product?.colors" class="product-color" [style.background]="color"></span>
+        </div>
+
+        <div class="rating-quantity-container">
+          <div class="rating-container">
+            <div class="rating-stars">
+              <span class="fas fa-star"></span>
+              <span class="fas fa-star"></span>
+              <span class="fas fa-star"></span>
+              <span class="fas fa-star"></span>
+              <span class="fas fa-star"></span>
+            </div>
+            <span class="rating-value">4.5</span>
+          <div class="product-quantity">
+            <div class="input-group">
+              <label for="quantity" class="input-group-text"></label>
+              <input type="number" id="quantity" [(ngModel)]="product.quantity" min="1" class="form-control">
+            </div>
+          </div>
+
+          </div>
+
+        </div>
+        <button class="add-to-cart-button" (click)="gotToCart()">Add to Cart</button>
+      </div>
+    </div>
   </div>
 </div>
-
-

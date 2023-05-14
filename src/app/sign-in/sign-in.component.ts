@@ -10,7 +10,7 @@ import {
 import Validation from '../utils/validation';
 import { Router } from '@angular/router';
 import { FirebaseUISignInFailure, FirebaseUISignInSuccessWithAuthResult } from 'firebaseui-angular';
-import { NavbarComponent } from '../header/navbar.component';
+import {HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 @Component({
   selector: 'app-sign-in',
@@ -52,8 +52,9 @@ export class SignInComponent implements OnInit {
   }
   successCallback(data: FirebaseUISignInSuccessWithAuthResult) {
     console.log('successCallback', data);
-    this.router.navigate(['/']);
+    this.router.navigate(['/home']);
   }
+
 
   errorCallback(data: FirebaseUISignInFailure) {
     console.warn('errorCallback', data);

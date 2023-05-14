@@ -3,7 +3,7 @@ import { AuthService } from '../shared/services/auth.service';
 import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import Validation from '../utils/validation';
 import { FooterComponent } from '../footer/footer.component';
-import { NavbarComponent } from '../header/navbar.component';
+import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-sign-up',
   templateUrl: './sign-up.component.html',

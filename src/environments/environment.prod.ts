@@ -8,5 +8,7 @@ export const environment = {
   messagingSenderId: "915351333573",
   appId: "1:915351333573:web:f5ad91040c178f7ebe9eac"
   },
-  baseApi: 'https://fakestoreapi.com/'
+  baseApi :"http://127.0.0.1:8000/api/v1/prods"
 };
+
+

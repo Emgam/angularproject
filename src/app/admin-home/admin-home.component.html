@@ -1,0 +1,51 @@
+
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed': ''">
+  <div class="logo-container">
+    <i class="fas fa-bars logo" (click)="toggleCollapse()"></i>
+      <div class="logo-text" @fadeInOut *ngIf="collapsed">Menu</div>
+      <button class="btn-close" @rotate *ngIf="collapsed" (click)="closeSidenav()">
+          <i class="fal fa-times close-icon"></i>
+      </button>
+  </div>
+  <ul class="sidenav-nav">
+      <li class="sidenav-nav-item" *ngFor="let data of navData">
+          <a class="sidenav-nav-link" [routerLink]="[data.routeLink]"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}"
+          >
+              <i class="sidenav-link-icon {{data.icon}}"></i>
+              <span class="sidenav-link-text" @fadeInOut *ngIf="collapsed">
+                  {{data.label}}
+              </span>
+          </a>
+      </li>
+  </ul>
+</div>
+
+
+
+
+<div class="product-list align-center">
+    <p class="message-p">{{ productMessage }}</p>
+    <div *ngFor="let product of  productList " class="product-item">
+      <div class="product-wrapper" class="nav-link" routerLink="contact" routerLinkActive="active-link">
+        <img [src]="product.image" alt="{{ product.name }}" class="product-image">
+        <div class="product-details">
+          <h3 class="product-name">{{ product.name }}</h3>
+          <p class="product-price">{{ product.price }} DT</p>
+          <p class="product-description">{{ product.description }}</p>
+          <p class="product-category">{{ product.category }}</p>
+          <div class="product-sizes">
+        <span class="product-size">{{ product.sizes }}</span>
+          </div>
+          <div class="product-colors">
+            <span  class="product-color" >{{product.colors}}</span>
+          </div>
+          <button class="btn btn-primary" (click)="deleteProduct(product.id)">Delete </button>
+          <button class="btn btn-primary" routerLink="/admin-update/{{product.id}}">Update  </button>
+
+
+        </div>
+      </div>
+    </div>
+  </div>

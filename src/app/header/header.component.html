@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand pinknova" routerLink="">PInKnoVa</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a href="#" class="nav-link" routerLink="home" routerLinkActive="active-link"
+            (click)="goToHome()">Home</a></li>
+        <li class="nav-item"><a href="#" class="nav-link" routerLink="menu" routerLinkActive="active-link"
+            (click)="gotToMenu()">Menu</a></li>
+            <li class="nav-item">
+              <a href="#" class="nav-link" routerLink="sign-in" routerLinkActive="active-link">Login</a>
+            </li>
+        <li class="nav-item"><a href="#" class="nav-link" routerLink="About" routerLinkActive="active-link"
+            >About US</a></li>
+        <li class="nav-item">
+          <a href="#" class="nav-link" routerLink="adminsignup" routerLinkActive="active-link">Admin</a>
+        </li>
+        <li class="nav-item">
+          <form class="form-inline my-2 my-lg-0">
+            <div class="input-group d-flex align-items-center">
+              <input class="search-input form-control" type="search" placeholder="search" aria-label="search">
+              <div class="input-group-append">
+                <button class="btn btn-outline-dark"  id="filter" type="submit"><i class="fa fa-search"></i></button>
+              </div>
+            </div>
+          </form>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./cart" (click)="gotToCart()"><i class="fa fa-shopping-cart"></i></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
